@@ -1,0 +1,226 @@
+{
+  "remarks": "Domain rules routing",
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+    {
+      "remarks": "Ads — block",
+      "outboundTag": "block",
+      "type": "field",
+      "domain": [
+        "geosite:category-ads-all"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Private addresses — direct (domains)",
+      "outboundTag": "direct",
+      "type": "field",
+      "domain": [
+        "geosite:private"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Private addresses — direct (IP)",
+      "outboundTag": "direct",
+      "type": "field",
+      "ip": [
+        "geoip:private"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "WPC",
+      "outboundTag": "direct",
+      "type": "field",
+      "domain": [
+        "domain:crazypanda.ru",
+        "domain:crazypanda.games",
+        "domain:unity3d.com",
+        "domain:vkuserphoto.ru",
+        "domain:userapi.com"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Direct",
+      "outboundTag": "direct",
+      "type": "field",
+      "domain": [
+        "domain:mt.yamilov.com",
+        "domain:2ip.io"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Misc",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "domain:2ip.ru",
+        "domain:4pda.to",
+        "domain:adguard.org",
+        "domain:adguard.com",
+        "domain:adguard.info",
+        "domain:adtidy.org",
+        "domain:nike.com",
+        "domain:newbalance.com",
+        "domain:x.ai",
+        "domain:ufc.com",
+        "domain:ufcfightpass.com",
+        "domain:ufcespanol.com",
+        "domain:ufc.tv",
+        "domain:savefrom.net",
+        "domain:sf-tools.com",
+        "domain:sf-converter.com",
+        "domain:qrcode-alligator.com",
+        "domain:grammarly.com",
+        "domain:aistudio.google.com",
+        "domain:alkalimining-pa.googleapis.com",
+        "domain:yamilov.com",
+        "domain:habr.com",
+        "domain:habrastorage.org"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Telegram (domains)",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:telegram"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Telegram (IP)",
+      "outboundTag": "proxy",
+      "type": "field",
+      "ip": [
+        "geoip:telegram"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "YouTube",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:youtube"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Signal",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:signal"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Instagram + Facebook + WhatsApp (domains)",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:instagram",
+        "geosite:facebook",
+        "geosite:whatsapp",
+        "geosite:meta"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Instagram + Facebook + WhatsApp (IP)",
+      "outboundTag": "proxy",
+      "type": "field",
+      "ip": [
+        "geoip:instagram",
+        "geoip:facebook",
+        "geoip:whatsapp",
+        "geoip:meta"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Discord (domains)",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:discord"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Discord (IP)",
+      "outboundTag": "proxy",
+      "type": "field",
+      "ip": [
+        "geoip:discord"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Speedtest",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:speedtest"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Roblox",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:roblox"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "RKN blocked domains — proxy",
+      "outboundTag": "proxy",
+      "type": "field",
+      "domain": [
+        "geosite:ru-blocked"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "RKN blocked IP — proxy",
+      "outboundTag": "proxy",
+      "type": "field",
+      "ip": [
+        "geoip:ru-blocked"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Russian domains — direct",
+      "outboundTag": "direct",
+      "type": "field",
+      "domain": [
+        "geosite:ru"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Russian IP — direct",
+      "outboundTag": "direct",
+      "type": "field",
+      "ip": [
+        "geoip:ru"
+      ],
+      "enabled": true
+    },
+    {
+      "remarks": "Everything else — direct (FINAL)",
+      "outboundTag": "direct",
+      "type": "field",
+      "port": "0-65535",
+      "enabled": true
+    }
+  ]
+}
