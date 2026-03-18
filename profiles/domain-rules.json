@@ -133,10 +133,7 @@
     "outboundTag": "proxy",
     "type": "field",
     "ip": [
-      "geoip:instagram",
-      "geoip:facebook",
-      "geoip:whatsapp",
-      "geoip:meta"
+      "geoip:facebook"
     ],
     "enabled": true
   },
@@ -146,15 +143,6 @@
     "type": "field",
     "domain": [
       "geosite:discord"
-    ],
-    "enabled": true
-  },
-  {
-    "remarks": "Discord (IP)",
-    "outboundTag": "proxy",
-    "type": "field",
-    "ip": [
-      "geoip:discord"
     ],
     "enabled": true
   },
@@ -191,24 +179,6 @@
     "type": "field",
     "ip": [
       "geoip:ru-blocked"
-    ],
-    "enabled": true
-  },
-  {
-    "remarks": "Russian domains — direct",
-    "outboundTag": "direct",
-    "type": "field",
-    "domain": [
-      "geosite:ru"
-    ],
-    "enabled": true
-  },
-  {
-    "remarks": "Russian IP — direct",
-    "outboundTag": "direct",
-    "type": "field",
-    "ip": [
-      "geoip:ru"
     ],
     "enabled": true
   },
