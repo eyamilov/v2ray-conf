@@ -1,3 +1,16 @@
+# JetBrains IDEs
 .idea/
+
+# VS Code
+.vscode/
+
+# macOS
 .DS_Store
-temp.txt
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Local temp files
+temp/
+CLAUDE.md

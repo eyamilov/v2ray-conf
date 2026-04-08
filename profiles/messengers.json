@@ -1,0 +1,47 @@
+[
+  {
+    "remarks": "Messaging apps",
+    "process": [
+      "Discord.exe",
+      "Telegram.exe",
+      "WhatsApp.exe"
+    ],
+    "outboundTag": "proxy",
+    "type": "field",
+    "enabled": true,
+    "locked": false
+  },
+  {
+    "remarks": "Messaging domains",
+    "domain": [
+      "geosite:discord",
+      "geosite:telegram",
+      "geosite:whatsapp",
+      "geosite:signal",
+      "geosite:viber"
+    ],
+    "outboundTag": "proxy",
+    "type": "field",
+    "enabled": true,
+    "locked": false
+  },
+  {
+    "remarks": "Messaging IP",
+    "ip": [
+      "geoip:telegram",
+      "geoip:facebook"
+    ],
+    "outboundTag": "proxy",
+    "type": "field",
+    "enabled": true,
+    "locked": false
+  },
+  {
+    "remarks": "Everything else",
+    "port": "0-65535",
+    "outboundTag": "direct",
+    "type": "field",
+    "enabled": true,
+    "locked": false
+  }
+]
